@@ -1,0 +1,79 @@
+.iu-grid-root {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.iu-region {
+  width: 100%;
+}
+
+.iu-region-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.iu-component {
+  background: white;
+}
+
+/* Size classes */
+.iu-component.iu-size-full {
+  grid-column: span 12;
+}
+
+.iu-component.iu-size-half {
+  grid-column: span 6;
+}
+
+.iu-component.iu-size-third {
+  grid-column: span 4;
+}
+
+.iu-component.iu-size-quarter {
+  grid-column: span 3;
+}
+
+/* Mobile: full-width components */
+@media (max-width: 768px) {
+  .iu-component {
+    grid-column: span 12 !important;
+  }
+}
+
+/* Intent input defaults */
+.iu-intent-form {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.iu-intent-input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d0d7de;
+  font-size: 0.95rem;
+}
+
+.iu-intent-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px #2563eb33;
+}
+
+.iu-intent-submit {
+  padding: 0.45rem 0.9rem;
+  border-radius: 0.5rem;
+  border: none;
+  background: #2563eb;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.iu-intent-submit:hover {
+  filter: brightness(1.05);
+}
